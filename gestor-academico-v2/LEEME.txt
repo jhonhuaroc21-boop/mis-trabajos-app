@@ -1,0 +1,26 @@
+MIS TRABAJOS — VERSIÓN CORREGIDA: COMPARTIDOS POR CURSO
+
+ARCHIVOS
+- index.html: aplicación web corregida para escritorio y móvil, con acceso, cursos, trabajos personales, espacios compartidos de solo lectura y grupos colaborativos por curso.
+- grupos_compartidos.sql: tablas, permisos y almacenamiento para grupos con archivos PDF, DOC y DOCX.
+
+INSTALACIÓN
+1. Haz una copia de seguridad del index.html que usas actualmente.
+2. Reemplázalo por el index.html de esta carpeta. La URL y la clave pública de Supabase ya están incluidas tal como estaban en el archivo anterior; no agregues claves secretas o service_role al HTML.
+3. En Supabase abre SQL Editor > New query. Copia todo el contenido de grupos_compartidos.sql y pulsa Run una sola vez. El script añade la funcionalidad de grupos y no elimina los cursos ni trabajos existentes.
+4. Abre la aplicación con Live Server y recarga la página. Inicia sesión.
+5. En el menú lateral, entra a “Compartidos por curso” y pulsa “Crear grupo”. Selecciona un curso, coloca el nombre y crea el grupo. Comparte el código generado con tus compañeros.
+6. Cada compañero debe entrar con su propia cuenta, elegir “Unirme a grupo”, ingresar el código y abrir el grupo para subir o descargar archivos.
+
+FUNCIONES
+- Grupos vinculados a un curso.
+- Archivos colaborativos PDF, DOC y DOCX, hasta 20 MB por archivo.
+- Los archivos solo son accesibles para los integrantes autorizados del grupo.
+- Los trabajos personales siguen siendo privados y separados; unirse a un grupo no permite editar los trabajos personales de otra persona.
+- Los botones de creación y unión están disponibles en el menú lateral y dentro de la pantalla Compartidos.
+
+SI NO FUNCIONA
+- Revisa la consola del navegador y el estado de Supabase.
+- Verifica que el script SQL se haya ejecutado completo y sin errores.
+- Prueba la invitación con una segunda cuenta de usuario.
+- No publiques la clave secreta/service_role. La clave publishable incluida está diseñada para uso en el navegador con las políticas de seguridad configuradas.
